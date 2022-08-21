@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="description" content="Les animaux">
+    <title>Les animaux</title>
+</head>
+<body>
+    <form method="POST" action="./add.php">
+        <table border= "1">
+
+            <tr>
+                <td><label for="aName">Nom&nbsp;: </label></td>
+                <td><input type="text" name="nom" id="aName"></td>
+            </tr>
+            <tr>
+                <td><label for="aType">Type&nbsp;: </label></td>
+                <td><input type="text" name="categorie" id="aType"></td>
+            </tr>
+            <tr>
+                <td><label for="agroupe">Groupe&nbsp;: </label></td>
+                <td><input type="text" name="groupe" id="agroupe"></td>
+            </tr>
+            <tr>
+                <td><label for="aHabitat">Habitat&nbsp;: </label></td>
+                <td><input type="text" name="habitat" id="aHabitat"></td>
+            </tr>
+            <tr>
+                <td><label for="aRegime">Régime alimentaire&nbsp;: </label></td>
+                <td><input type="text" name="regime" id="aRegime"></td>
+            </tr>
+            <tr>
+                <td><label for="aImage">Image&nbsp;: </label></td>
+                <td><input type="text" name="photo" id="aImage"></td>
+            </tr>
+            
+        </table>
+
+        <input type="submit" value="Ajouter">
+    </form>
+
+    <a href="./read.php" title="Redirection sur la page de tous les utilisateurs">Afficher tous les animaux</a>
+</body>
+</html>
