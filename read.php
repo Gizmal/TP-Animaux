@@ -12,7 +12,14 @@
 
         // Déclaration puis exécution de la requête permettant de récupérer 
         // l'ensemble des informations au sujet des utilisateurs stockés en BDD
-        $execResult = $connexion->query("SELECT * FROM animaux");
+        if($_GET && $_GET["chCategorie"]) {
+            $choix=$_GET["chCategorie"];
+            $req="SELECT * FROM animaux WHERE categorie='$choix'";
+        }
+        else{
+            $req="SELECT * FROM animaux";
+        }
+        $execResult = $connexion->query($req);
         $assocResults = $execResult->fetchAll(PDO::FETCH_ASSOC);
 
         // Parcours du tableau de résultats (afin d'afficher chaque utilisateur)

@@ -13,7 +13,7 @@ $tableAnimaux = $execResult->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <body>
 <h1>Selectionnez une catégorie d'animaux<h1>        
-<form method="GET" action="./readCategorie.php">
+<form method="GET" action="./read.php">
     <select name="chCategorie" id="selectCategorie">
         <?php foreach($tableAnimaux as $key => $catG ) :?>
             <option><?=$catG["categorie"]; ?></option>
