@@ -10,17 +10,21 @@
 
         // Récupère les données issues du formulaire d'ajout (cf. formulaireAjout.html)
         $nom = $_POST['nom'];
-        $categorie = $_POST['categorie'];
-        $groupe = $_POST['groupe'];
+        $classe= $_POST['classe'];
+        $ordre = $_POST['ordre'];
+        $famille = $_POST['famille'];
         $habitat = $_POST['habitat'];
-        $regime = $_POST['regime'];
+        $statut = $_POST['statut'];
         $photo = $_POST['photo'];
 
         // Déclaration puis exécution de la requête d'ajout
         // (dynamique en fonction des données issues du formulaire)
-        $execResult = $connexion->query("INSERT INTO animaux (nom,categorie,groupe,habitat,regime_al,photo) VALUES ('$nom','$categorie','$groupe','$habitat','$regime','$photo')");
+        $execResult = $connexion->query("INSERT INTO animaux (nom,classe,ordre,famille,habitat,statut,photo)
+         VALUES ('$nom','$classe','$ordre','$famille','$habitat','$statut','$photo')");
 
         /* var_dump($execResult); */
 
     }
 ?>
+<h1>Ajout effectué avec succés</h1>
+<a href="./read.php" title="Redirection sur la page d'affichage">Afficher tous les animaux</a>

@@ -12,9 +12,9 @@
 
         // Déclaration puis exécution de la requête permettant de récupérer 
         // l'ensemble des informations au sujet des utilisateurs stockés en BDD
-        if($_GET && $_GET["chCategorie"]) {
-            $choix=$_GET["chCategorie"];
-            $req="SELECT * FROM animaux WHERE categorie='$choix'";
+        if($_GET && $_GET["chClasse"]) {
+            $choix=$_GET["chClasse"];
+            $req="SELECT * FROM animaux WHERE classe='$choix'";
         }
         else{
             $req="SELECT * FROM animaux";
@@ -26,8 +26,9 @@
         foreach($assocResults as $singleRes):
         ?>
             <li>
-                <?= $singleRes["id"] ?> | <?= $singleRes["nom"] ?> | <?= $singleRes["categorie"] ?> | 
-                <?= $singleRes["groupe"] ?> | <?= $singleRes["habitat"] ?> | <?= $singleRes["regime_al"] ?> | <?= $singleRes["photo"]?>;
+                <?= $singleRes["id"] ?> | <?= $singleRes["nom"] ?> | <?= $singleRes["classe"] ?> | 
+                <?= $singleRes["ordre"] ?> | <?= $singleRes["famille"] ?> | <?= $singleRes["habitat"] ?> | 
+                <?= $singleRes["statut"]?> | <?= $singleRes["photo"]?>;
                 <a href="./update.php?id=<?= $singleRes["id"] ?>">Modifier</a>
                 <form method="POST" action="./delete.php" style="display:inline">
                     <input type="hidden" name="hiddenField" value="<?= $singleRes["id"] ?>">

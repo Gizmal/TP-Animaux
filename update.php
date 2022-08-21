@@ -14,17 +14,18 @@
         }
 
         else{
-            $userID = $_POST["userID"];
-            $newAname = $_POST["nom"];
-            $newAcategorie = $_POST["categorie"];
-            $newAgroupe = $_POST["groupe"];
-            $newAhabitat = $_POST["habitat"];
-            $newAregime = $_POST["regime"];
-            $newAphoto = $_POST["photo"];
+            $newID = $_POST["userID"];
+            $newNom = $_POST["nom"];
+            $newClasse = $_POST["classe"];
+            $newOrdre = $_POST["ordre"];
+            $newFamille = $_POST["famille"];
+            $newHabitat = $_POST["habitat"];
+            $newStatut = $_POST["statut"];
+            $newPhoto = $_POST["photo"];
 
 
-            $execResult = $connexion->query("UPDATE animaux SET nom = '$newAname', categorie = '$newAcategorie', groupe = '$newAgroupe', habitat = '$newAhabitat', regime_al = '$newAregime', photo = '$newAphoto' WHERE id='$userID'");
-            var_dump($execResult);
+            $execResult = $connexion->query("UPDATE animaux SET nom = '$newNom', classe = '$newClasse', ordre = '$newOrdre', 
+            famille = '$newFamille', habitat = '$newHabitat', statut = '$newStatut' , photo = '$newPhoto' WHERE id='$newID'");
         }
     }
 ?>
@@ -34,33 +35,38 @@
     <input type="hidden" name="userID" value="<?php if(isset($result)){ echo $_GET["id"];} ?>">
 
     <div>
-        <label for="aName">Nom&nbsp;: </label>
-        <input type="text" name="nom" id="aName" value="<?php if(isset($result)){ echo $result[0]["nom"];} ?>">
+        <label for="aNom">Nom&nbsp;: </label>
+        <input type="text" name="nom" id="aNom" value="<?php if(isset($result)){ echo $result[0]["nom"];} ?>">
     </div>
 
     <div>
-        <label for="aCategorie">Catégorie&nbsp;: </label>
-        <input type="text" name="categorie" id="aCategorie" value="<?php if(isset($result)){ echo $result[0]["categorie"];} ?>">
+        <label for="aClasse">Catégorie&nbsp;: </label>
+        <input type="text" name="classe" id="aClasse" value="<?php if(isset($result)){ echo $result[0]["classe"];} ?>">
     </div>
 
     <div>
-        <label for="aGroupe">Groupe&nbsp;: </label>
-        <input type="text" name="groupe" id="aGroupe" value="<?php if(isset($result)){ echo $result[0]["groupe"];} ?>">
+        <label for="aOrdre">Groupe&nbsp;: </label>
+        <input type="text" name="ordre" id="aOrdre" value="<?php if(isset($result)){ echo $result[0]["ordre"];} ?>">
     </div>
 
     <div>
-        <label for="aHabitat">Habitat&nbsp;: </label>
+        <label for="aFamille">Habitat&nbsp;: </label>
+        <input type="text" name="famille" id="aFamille" value="<?php if(isset($result)){ echo $result[0]["famille"];} ?>">
+    </div>
+
+    <div>
+        <label for="aHabitat">Régime alimentaire&nbsp;: </label>
         <input type="text" name="habitat" id="aHabitat" value="<?php if(isset($result)){ echo $result[0]["habitat"];} ?>">
     </div>
 
     <div>
-        <label for="aRegime">Régime alimentaire&nbsp;: </label>
-        <input type="text" name="regime" id="aRegime" value="<?php if(isset($result)){ echo $result[0]["regime_al"];} ?>">
+        <label for="aStatut">Statut ( UICN )&nbsp;: </label>
+        <input type="text" name="statut" id="aStatut" value="<?php if(isset($result)){ echo $result[0]["statut"];} ?>">
     </div>
 
     <div>
         <label for="aPhoto">Photo&nbsp;: </label>
-        <input type="files" name="photo" id="aPhoto" value="<?php if(isset($result)){ echo $result[0]["photo"];} ?>">
+        <input type="text" name="photo" id="aPhoto" value="<?php if(isset($result)){ echo $result[0]["photo"];} ?>">
     </div>
 
     <input type="submit" value="Mettre à jour">
