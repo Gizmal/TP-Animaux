@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="description" content="Formulaire - Les animaux">
+    <link rel="stylesheet" href="../webfiles/css/style.css">
+    <link rel="icon" href="">
+    <title>Formulaire - Les animaux</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Veuillez remplir le formulaire&nbsp;:</h1>
+        </div>
+    </header>
+    <main>
+        <form method="POST" action="./webfiles/php/Identification/add.php">
+            <div>
+                <input type="text" name="pseudo" id="pName" placeholder="Votre pseudo&nbsp;:">
+            </div>
+
+            <div>
+                <input type="email" name="email" id="aClasse" placeholder="Votre Email&nbsp;:">
+            </div>
+
+            <div>
+                <input type="password" name="password" id="uPass" pattern="[0-9a-zA-Z]{4}" placeholder="Votre mot de passe&nbsp;:">
+            </div>
+
+            <div>
+                <input type="submit" value="Envoyer" id="tSub">
+            </div>
+        </form>
+        <p>
+            <a href="./webfiles/php/Identification/read.php" title="Redirection sur la page de tous les utilisateurs">
+                Afficher tous les utilisateurs
+            </a>
+        </p>
+    </main>
+    <footer>
+        <p>
+            Intégration par
+            <a href="https://github.com/Gizmal" target="_blank" title="Redirection vers le github de Vulquin Jérôme">
+                Vulquin Jérome
+            </a>&nbsp;-&nbsp;
+            <a href="#" title="Redirection vers le github de Triart Jean-Micel">
+                Triart Jean-Michel
+            </a>&nbsp;-&nbsp;            
+            <a href="#" title="Redirection vers le github de N Rachid">
+                N Rachid
+            </a>&nbsp;-&nbsp;&copy;&nbsp;-&nbsp;
+            <input id="Aujourdhui" type="date" name="date" value="" readonly="none">
+            <script>
+                document.getElementById("Aujourdhui").valueAsDate = new Date();
+            </script>
+        </p>
+        <p id="date"></p>
+        <script>
+            document.getElementById("date").innerHTML = Date();
+        </script>
+    </footer>
+</body>
+
+</html>

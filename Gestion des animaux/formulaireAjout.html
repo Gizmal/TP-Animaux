@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="description" content="Les animaux">
+    <link rel="stylesheet" href="../webfiles/css/style.css">
+    <link rel="icon" href="">
+    <title>Les animaux</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Veuillez remplir le tableau&nbsp;:</h1>
+        </div>
+
+    </header>
+    <main class="animaux">
+        <form method="POST" action="./add.php">
+            <table>
+                <tr>
+                    <td><label for="aName">Nom&nbsp;: </label></td>
+                    <td><input type="text" name="nom" id="aName"></td>
+                </tr>
+                <tr>
+                    <td><label for="aClasse">Classe&nbsp;: </label></td>
+                    <td><input type="text" name="classe" id="aClasse"></td>
+                </tr>
+                <tr>
+                    <td><label for="aOrdre">Ordre&nbsp;: </label></td>
+                    <td><input type="text" name="ordre" id="aOrdre"></td>
+                </tr>
+                <tr>
+                    <td><label for="aFamille">Famille&nbsp;: </label></td>
+                    <td><input type="text" name="famille" id="aFamille"></td>
+                </tr>
+                <tr>
+                    <td><label for="aHabitat">Habitat&nbsp;: </label></td>
+                    <td><input type="text" name="habitat" id="aHabitat"></td>
+                </tr>
+                <tr>
+                    <td><label for="aStatut">Statut&nbsp;: </label></td>
+                    <td><input type="text" name="statut" id="aStatut"></td>
+                </tr>
+                <tr>
+                    <td><label for="aPhoto">Photo&nbsp;: </label></td>
+                    <td><input type="text" name="photo" id="aPhoto"></td>
+                </tr>
+        
+            </table>
+            <div class="ajout">
+                <input type="submit" value="Ajouter" id="tSub">
+            </div>
+        </form>
+        <div class="lienaffiche">
+            <a class="affichage" href="./read.php" title="Affichage de tout les animaux">
+                Afficher tous les animaux
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>
+            Intégration par 
+            <a href="https://github.com/Gizmal" title="Redirection vers le github de Vulquin Jérôme" target="_blank">
+                Vulquin Jérôme
+            </a>&nbsp;-&nbsp;
+            <a href="#" title="Redirection vers le github de Triart Jean-Micel">
+                Triart Jean-Michel
+            </a>&nbsp;-&nbsp;            
+            <a href="https://github.com/Rachid02" title="Redirection vers le github de N Rachid" target="_blank">
+                N Rachid
+            </a>&nbsp;-&nbsp;&copy;&nbsp;-&nbsp;
+            <input id="Aujourdhui" type="date" name="date" value="" readonly>
+            <script>
+                document.getElementById("Aujourdhui").valueAsDate = new Date();
+            </script>    
+        </p>
+        <p id="date"></p>
+            <script>
+                document.getElementById("date").innerHTML = Date() ;
+            </script>
+    </footer>
+</body>
+</html>

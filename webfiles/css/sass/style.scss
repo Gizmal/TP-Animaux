@@ -1,0 +1,168 @@
+/* Formulaire html Identification des personnes */
+/* Formulaire html Ajout d'animaux */
+
+/* Read */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+* {
+    margin: 0 auto;
+    
+    font-size: 20px;
+}
+
+/* Formulaire Identification des personnes */
+/* Formulaire Ajout d'animaux */
+/* 1 Header */
+/* 2 Main */
+/* 3 Footer */
+
+header{
+    font-family: 'Dancing Script', cursive;
+}
+
+header div{
+    max-width: 1600px;
+    max-height: 100px;
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+    padding: 3rem;
+}
+
+header h1{
+    font-size: 3rem;
+}
+
+main {
+    padding: 3rem;
+    font-size: 3em;
+    font-family: 'Dancing Script', cursive;
+}
+
+.animaux {
+    background-image: url("./src/img/animaux.webp");
+}
+
+main table {
+    border: none;
+}
+
+main table tr{
+    border: none;
+}
+
+main table td{
+    border: none;
+}
+
+main table label{
+    font-size: 1.5rem;
+}
+
+main form {
+    max-width: 700px;
+    font-size: 3em;
+    background-color: #359E7B;
+    margin: auto;
+    border-radius: 5px; 
+}
+
+main div {
+    display: flex;
+    padding-top: 1rem;   
+}
+
+main input {
+    border-radius: 5px;
+    font-size: 1.5rem;
+    max-width: 600px;
+    border-bottom: solid 1px black;
+}
+
+main form input:last-of-type{
+    display: block;
+    position: relative;
+    justify-content: center;
+    margin: 2rem auto;   
+    padding: 0.5rem 1rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+main p{
+    text-align: center;
+}
+
+main p a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+footer {
+    margin: 0 auto;
+    font-family: 'Dancing Script', cursive;
+}
+
+footer p {
+    max-width: 1600px;
+    max-height: 100px;
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+    font-size: 1.25rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer p:first-of-type {
+    padding-top: 3rem;
+    font-size: 1.5rem;
+}
+
+footer p:last-of-type {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Read fichier php*/
+#titre{
+    font-size: 2rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem 0 1.2rem;
+    font-weight: 900;
+    color: steelblue;
+}
+
+.fPhp a{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: #359E7B;
+    font-weight: 500;
+}
+
+.table{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    margin: 1rem;
+    border: none;
+    border-collapse: collapse;
+}
+
+.tr{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: solid 4px steelblue;
+    padding: 10px;
+}
+
+.td{
+    border: none;
+    padding: 10px;
+}
+
+.td a{
+    text-decoration: none;
+}
